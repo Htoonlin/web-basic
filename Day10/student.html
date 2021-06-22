@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Student Marks</title>
+        <style type="text/css">
+        input, select {
+            width: 200px;
+            padding: 10px 8px;
+            background-color: wheat;
+            border: 1px solid #999;
+        }
+        button {
+            width: 218px;
+            height: 36px;
+            background-color: bisque;
+            border: 1px solid burlywood;
+            box-shadow: 0px 2px 3px #555;
+        }
+        table {
+            width: 800px;
+        }
+        </style>
+    </head>
+    <body>
+        <p>
+            <input type="text" id="studentName" placeholder="Enter Student Name" />
+            <select id="subject">
+                <option value="Myanmar">မြန်မာ</option>
+                <option value="English">English</option>
+                <option value="Math">Math</option>
+            </select>
+            <input type="number" id="mark" placeholder="Enter Mark" />
+            <button type="button" onclick="checkMark()">Add Mark</button>
+        </p>
+        <div>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Subject</th>
+                        <th>Mark</th>
+                        <th>Result</th>
+                    </tr>
+                </thead>
+                <tbody id="result">
+                    <tr>
+                        <td>${name}</td>
+                        <td>${subject}</td>
+                        <td>${mark}</td>
+                        <td>${if...else value}</td>
+                    </tr>
+                    <tr>
+                        <td>${name}</td>
+                        <td>${subject}</td>
+                        <td>${mark}</td>
+                        <td>${if...else value}</td>
+                    </tr>
+                    <tr>
+                        <td>${name}</td>
+                        <td>${subject}</td>
+                        <td>${mark}</td>
+                        <td>${if...else value}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <script type="text/javascript">
+            var subjects = ['Myanmar', 'English', 'Math', 'Chemistry', 'Physics', 'Biology', 'Ecology'];
+            document.getElementById("subjectLists").innerHTML = "<h1>Available Subjects</h1>" + subjects.join(', ');
+            
+            /**
+             * DOM => document.getEleme... => input value || innerHTML
+             * condition => if ... else if ... else
+             * string concat => "hello " + "world" => "hello world"
+             *               => '<tr>' + '<td>' + name + '</td>' + '<td>' + subject + '</td>' + '</tr>'
+             */
+            function checkMark(){
+                let name = document.getElementById("studentName").value;
+                let subject = document.getElementById("subject").value;
+                let mark = document.getElementById("mark").value;
+                let result = '<tr>';
+                result += '<td>' + name + '</td>';
+                result += '<td>' + subject + '</td>';
+                result += '<td>' + mark + '</td>';
+                result += '<td>';
+                if ((subject == "Myanmar" || subject == "English" || subject == "Biology" || subject == "Ecology") && mark >= 75) {
+                    result += "D*";
+                } else if (mark >= 80) {
+                    result += "D*";
+                } else if (mark < 40) {
+                    result += "Failed";
+                } else {
+                    result += "Passed";
+                }    
+                result += '</td>';
+                result += '</tr>'
+                const currentData = document.getElementById("result").innerHTML;
+                document.getElementById("result").innerHTML = currentData + result;
+            }
+        </script>
+    </body>
+</html>

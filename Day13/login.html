@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sample Login</title>
+        <style type="text/css">
+            body{
+                padding: 0;
+                margin: 0;
+                background: url("img/blue-snow.png");
+            }
+            .login {
+                background-color: whitesmoke;
+                width: 300px;
+                border: 1px solid #9c9c9c;
+                margin: auto;
+                margin-top: 200px;
+                padding: 20px 50px;
+                border-radius: 8px;
+                box-shadow: 0 4px 6px #666;
+            }
+            .login td {
+                padding: 10px 8px;
+            }
+            .login h1{
+                color:rgb(108, 4, 28);
+            }
+            input {
+                width: 200px;
+                border: none;
+                border-bottom: 1px solid #9c9c9c;
+                padding: 8px;
+                border-radius: 4px;
+                background-color: rgb(175, 230, 247);
+            }
+            button{
+                border: 1px solid rgb(23, 164, 196);
+                background-color: #10a6c8;
+                color: white;
+                padding: 8px 15px;
+                box-shadow: 0 1px 3px #666;
+                border-radius: 4px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="login">
+            <h1>Welcome!</h1>
+            <p align="center">
+                <table>
+                    <tr>
+                        <td>E-mail</td>
+                        <td><input type="email" id="email" placeholder="Enter your email" /></td>
+                    </tr>
+                    <tr>
+                        <td>Password</td>
+                        <td><input type="password" id="password" placeholder="Enter your password" /></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <button type="button" onclick="login()">Login Here</button>
+                        </td>
+                    </tr>
+                </table>
+            </p>
+        </div>
+        <script type="text/javascript">
+        function login(){
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+        }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Age Check</title>
+    </head>
+    <body>
+        <p>
+            <input type="text" id="name" placeholder="Enter Your Name" />
+            <input type="number" id="year" placeholder="Enter Your Birth Year" />
+            <button type="button" onclick="check18()">Check Age</button>
+        </p>
+        <table border="1" style="width: 500px">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Year</th>
+                    <th>Age</th>
+                    <th>Access</th>
+                </tr>
+            </thead>
+            <tbody id="result">
+            </tbody>
+        </table>
+        <script type="text/javascript">
+            function check18(){
+                const name = document.getElementById("name").value;
+                const year = document.getElementById("year").value;
+                const current_year = 2021;
+                const age = 2021 - parseInt(year);
+                let row = '<tr>';
+                row += '<td>' + name + '</td>';
+                row += '<td>' + year + '</td>';
+                row += '<td>' + age + '</td>';
+                row += '<td>';
+                if(age >= 18){
+                    row += 'Granted';
+                }else{
+                    row += 'Denied';
+                }
+                row += '</td>';
+                row += '</tr>';
+                const currentData = document.getElementById("result").innerHTML;
+                document.getElementById("result").innerHTML = currentData + row;
+            }
+        </script>
+    </body>
+</html>

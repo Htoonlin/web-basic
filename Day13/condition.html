@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style type="text/css">
+        .profit {
+            background-color: aquamarine;
+        }
+        .loss {
+            background-color: coral;
+        }
+        </style>
+    </head> 
+    <body>
+        <div id="result">
+            <input type="number" />
+        </div>
+
+        <script type="text/javascript">
+        let mark = '100'; //String
+        let total = parseInt(mark); //From String to Int
+
+        let room = '';
+        if(total > 240){
+            room = 'A';
+        }else if(total < 240 && total >= 180){
+            room = 'B';
+        }else if(total < 180 && total >= 150) {
+            room = 'C';
+        } else if(total < 150){
+            room = 'D';
+        }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style type="text/css">
+            td{
+                width: 50px;
+                height: 50px;
+                background-color: #2A2A2A;
+                color: white;
+                text-align: center;
+                cursor: pointer;
+            }
+            td:hover{
+                background-color: #4A4A4A;
+            }
+            #display {
+                text-align: right;
+                font-size: 1.8em;
+                padding-right: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <td id="display" colspan="4"></td>
+            </tr>
+            <tr>
+                <td colspan="2" onclick="clkClear()">AC</td>
+                <td onclick="clkOperator('+')">+</td>
+                <td onclick="clkOperator('-')">-</td>
+            </tr>
+            <tr>
+                <td onclick="clkNumber(7)">7</td>
+                <td onclick="clkNumber(8)">8</td>
+                <td onclick="clkNumber(9)">9</td>
+                <td onClick="clkOperator('*')">*</td>
+            </tr>
+            <tr>
+                <td onclick="clkNumber(4)">4</td>
+                <td onclick="clkNumber(5)">5</td>
+                <td onclick="clkNumber(6)">6</td>
+                <td onClick="clkOperator('/')">/</td>
+            </tr>
+            <tr>
+                <td onclick="clkNumber(1)">1</td>
+                <td onclick="clkNumber(2)">2</td>
+                <td onclick="clkNumber(3)">3</td>
+                <td rowspan="2" onclick="clkOperator('=')">=</td>
+            </tr>
+            <tr>
+                <td colspan="3" onclick="clkNumber(0)">0</td>
+            </tr>
+        </table>
+        <script type="text/javascript">
+        var tempNumber = '';
+        var holdNumber = 0;
+        var operator = '';
+        function clkClear() {
+            tempNumber = '';
+            holdNumber = 0;
+            operator = '';
+            document.getElementById("display").innerHTML = tempNumber;
+        }
+        function clkNumber(a){
+            if(holdNumber > 0 && operator !== ''){
+                tempNumber = '';
+            }
+            tempNumber = tempNumber + a;
+            document.getElementById("display").innerHTML = tempNumber;
+        }
+        function clkOperator(o) {
+            if(holdNumber > 0){
+                if(operator === '+'){
+                    tempNumber = holdNumber + parseInt(tempNumber);
+                }else if(operator === '-'){
+                    tempNumber = holdNumber - parseInt(tempNumber);
+                }else if(operator === '*'){
+                    tempNumber = holdNumber * parseInt(tempNumber);
+                }else if(operator === '/') {
+                    tempNumber = holdNumber / parseInt(tempNumber);
+                }
+            }
+            holdNumber = parseInt(tempNumber);
+            operator = o;
+            document.getElementById("display").innerHTML = tempNumber.toString();
+        }
+        </script>
+    </body>
+</html>

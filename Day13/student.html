@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style type="text/css">
+        .room-a{
+            background-color: green;
+            color: white;
+        }
+        .room-b{
+            background-color: blue;
+            color: white;
+        }
+        .room-c{
+            background-color: orange;
+            color: white;
+        }
+        .room-d{
+            background-color: red;
+            color: white;
+        }
+        </style>
+    </head>
+    <body>
+        <h1>Define Student's Room</h1>
+        <p>
+            Over 240 => A (Green) <br />
+            240 - 180 => B (Blue) <br />
+            180 - 150 => C (Yellow) <br />
+            Lower 150 => D (Red) <br />
+        </p>
+        <p>
+            <input type="text" id="student" placeholder="Enter Student Name"/>
+            <input type="number" id="myanmar" placeholder="Enter Myanmar Mark" />
+            <input type="number" id="english" placeholder="Enter English Mark" />
+            <input type="number" id="math" placeholder="Enter Math Mark" />
+            <button type="button">Check Room</button>
+        </p>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>
+                        Name
+                    </th>
+                    <th>
+                        Myanmar
+                    </th>
+                    <th>
+                        English
+                    </th>
+                    <th>
+                        Math
+                    </th>
+                    <th>
+                        Total
+                    </th>
+                    <th>
+                        Room
+                    </th>
+                </tr>
+            </thead>
+            <tbody id="result">
+
+            </tbody>
+        </table>
+        <script type="text/javascript">
+        function checkRoom(){
+            var student = document.getElementById("student").value;
+            var myanmar = document.getElementById("myanmar").value;
+            var english = document.getElementById("english").value;
+            var math = document.getElementById("math").value;
+            var total = myanmar + english + math;
+            var color = "room";
+            var room = "";
+            if(total > 240){
+                color = "room-a";
+            }else if(total < 240 && total >= 180){
+                color = "room-b";
+            }else if(total < 180 && total >= 150){
+                color = "room-c";
+            }else if(total < 150){
+                color = "room-d";
+            }
+            var result = '<tr class="' + color + '">';
+                result += '<td>' + student + '</td>';
+                result += '<td>' + myanmar + '</td>';
+                result += '<td>' + english + '</td>';
+                result += '<td>' + math + '</td>';
+                result += '<td>' + total + '</td>';
+                result += '<td>' + student + '</td>';
+
+            var currentData = document.getElementById("result").innerHTML;
+            document.getElementById("result").innerHTML = 
+        }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Array Example</title>
+    </head>
+    <body>
+        <div>
+            <h1>Date</h1>
+            <p>
+                <select id="days"></select>
+                <select id="months"></select>
+                <select id="years"></select>
+            </p>
+        </div>
+        <div>
+            <select id="subjects"></select>
+        </div>
+        <script type="text/javascript">
+            const subjects = ["Myanmar", "English", "Math", "Chemistry", "Physics", "Biology", "Ecology"]; //String array
+            let result = '';
+            for(let i = 0; i < subjects.length; i++){
+                result += '<option value="' + subjects[i] + '">' + subjects[i] + '</option>';
+            }
+            document.getElementById("subjects").innerHTML = result;
+
+
+            let days = '';
+            for(let i = 1; i <= 31; i++){
+                days += '<option value="' + i + '">' + i + '</option>';
+            }
+            document.getElementById("days").innerHTML = days;
+
+            const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+            let monthValues = '';
+            for(let i = 0; i < months.length; i++){
+                monthValues += '<option value="' + (i + 1) + '">' + months[i] + '</option>'; 
+            }
+            document.getElementById('months').innerHTML = monthValues;
+
+            //1900 - 2021
+        </script>
+    </body>
+</html>

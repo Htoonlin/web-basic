@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Age Check</title>
+    </head>
+    <body>
+        <h1>Temperature in Myanmar</h1>
+        <p>
+            <input type="text" id="city" placeholder="Enter City" />
+            <input type="number" id="celcius" placeholder="Enter Celcius Temperature" />
+            <button type="button" onclick="addTemperature()">Add Temperature</button>
+        </p>
+        <table border="1" style="width: 500px">
+            <thead>
+                <tr>
+                    <th>City</th>
+                    <th>Celcius</th>
+                    <th>Farenheit</th>
+                    <th>Cold/Hot</th>
+                </tr>
+            </thead>
+            <tbody id="result">
+            </tbody>
+        </table>
+        <script type="text/javascript">
+            function addTemperature(){
+                const city = document.getElementById("city").value;
+                const celcius = document.getElementById("celcius").value;
+                const farenheit = celcius * (9 / 5) + 32;
+                let status = 'Cold';
+                if(celcius > 25){
+                    status = 'Hot';
+                }
+                let row = '<tr>';
+                row += '<td>' + city + '</td>';
+                row += '<td>' + celcius + '</td>';
+                row += '<td>' + farenheit + '</td>';
+                row += '<td>' + status + '</td>';
+                row += '</tr>';
+                const currentData = document.getElementById("result").innerHTML;
+                document.getElementById("result").innerHTML = currentData + row;
+            }
+        </script>
+    </body>
+</html>

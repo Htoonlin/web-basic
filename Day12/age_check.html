@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Age Check</title>
+        <style type="text/css">
+            .granted {
+                background-color: rgb(183, 255, 183);
+            }
+            .denied {
+                background-color: rgb(252, 163, 151);
+            }
+        </style>
+    </head>
+    <body>
+        <p>
+            <input type="text" id="name" placeholder="Enter Your Name" />
+            <input type="number" id="year" placeholder="Enter Your Birth Year" />
+            <button type="button" onclick="check18()">Check Age</button>
+        </p>
+        <table border="1" style="width: 500px">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Year</th>
+                    <th>Age</th>
+                    <th>Access</th>
+                </tr>
+            </thead>
+            <tbody id="result">
+            </tbody>
+        </table>
+        <script type="text/javascript">
+            function check18(){
+                const name = document.getElementById("name").value;
+                const year = document.getElementById("year").value;
+                const current_year = 2021;
+                const age = 2021 - parseInt(year);
+                const status = age >= 18 ? 'Granted' : 'Denied';
+                
+                let row = '<tr class="' + status.toLowerCase() + '">';
+                row += '<td>' + name + '</td>';
+                row += '<td>' + year + '</td>';
+                row += '<td>' + age + '</td>';
+                row += '<td>' + status + '</td>';
+                row += '</tr>';
+                const currentData = document.getElementById("result").innerHTML;
+                document.getElementById("result").innerHTML = currentData + row;
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calculator</title>
+    </head>
+    <body>
+        <div>
+            <input type="number" id="a" />
+            <input type="nubmer" id="b" />
+            <button type="button" onclick="add()">+</button>
+            <button type="button" onclick="celToFeh()">Cel to Feh</button>
+            <input type="number" id="result" readonly />
+        </div>
+        <script type="text/javascript">
+            function add(){
+                let a = parseInt(document.getElementById("a").value);
+                let b = parseInt(document.getElementById("b").value);
+                console.log("A + B = ", a + b);
+                document.getElementById("result").value = a + b;
+            }
+
+            function celToFeh(){
+                let a = parseInt(document.getElementById("a").value);
+                document.getElementById("result").value = (a * (9/5)) + 32;
+            }
+        </script>
+    </body>
+</html>

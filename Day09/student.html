@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Student Marks</title>
+        <style type="text/css">
+        input {
+            width: 200px;
+            padding: 10px 8px;
+            background-color: wheat;
+            border: 1px solid #999;
+        }
+        button {
+            width: 220px;
+            height: 36px;
+            background-color: bisque;
+            border: 1px solid burlywood;
+            box-shadow: 0px 2px 3px #555;
+        }
+        </style>
+    </head>
+    <body>
+        <p>
+            <input type="text" id="studentName" placeholder="Enter Student Name" />
+        </p>
+        <p id="subjectLists"></p>
+        <p>
+            <input type="text" id="subject" placeholder="Enter Subject" />
+        </p>
+        <p>
+            <input type="number" id="mark" placeholder="Enter Mark" />
+        </p>
+        <button type="button" onclick="checkMark()">Check</button>
+        <p>
+            <input type="text" style="width: 400px;" id="result" placeholder="Result" />
+        </p>
+        <script type="text/javascript">
+            var subjects = ['Myanmar', 'English', 'Math', 'Chemistry', 'Physics', 'Biology', 'Ecology'];
+            document.getElementById("subjectLists").innerHTML = "<h1>Available Subjects</h1>" + subjects.join(', ');
+            
+            function checkMark(){
+                let name = document.getElementById("studentName").value;
+                let subject = document.getElementById("subject").value;
+                let mark = document.getElementById("mark").value;
+                
+                let result = '';
+                if ((subject == "Myanmar" || subject == "English" || subject == "Biology" || subject == "Ecology") && mark >= 75) {
+                    result = (name + " gets " + subject + " D*.");
+                } else if (mark >= 80) {
+                    result = (name + " gets " + subject + " D*");
+                } else if (mark < 40) {
+                    result = (name + " fails " + subject + ".");
+                } else {
+                    result = (name + " passes " + subject + ".");
+                }    
+                document.getElementById("result").value = result;
+            }
+        </script>
+    </body>
+</html>

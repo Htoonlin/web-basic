@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Product List</title>
+        <style type="text/css">
+        .profit{
+            background-color: rgb(100, 255, 188);
+        }
+        .loss {
+            background-color: rgb(254, 147, 123);
+        }
+        </style>
+    </head>
+    <body>
+        <h1>Product List</h1>
+        <p class="input">
+            <input type="text" id="name" placeholder="Product Name" />
+            <select id="brand">
+                <option value="apple">Apple</option>
+                <option value="samsung">Samsung</option>
+                <option value="xiaomi">Asus</option>
+                <option value="huawei">Huawei</option>
+            </select>
+            <input type="number" id="buy" placeholder="Buy Price" />
+            <input type="number" id="sale" placeholder="Sale Price" />
+            <button type="button" onclick="addProduct()">Add Product</button>
+        </p>
+        <table border="1" style="width: 800px">
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Brand</th>
+                    <th>Buy Price</th>
+                    <th>Sale Price</th>
+                    <th>Profit</th>
+                </tr>
+            </thead>
+            <tbody id="result"></tbody>
+        </table>
+        <script type="text/javascript">
+        function addProduct(){
+            const name = document.getElementById("name").value;
+            const brand = document.getElementById("brand").value;
+            const buy = document.getElementById("buy").value;
+            const sale = document.getElementById("sale").value;
+            const profit = parseInt(sale) - parseInt(buy);
+            let status = "loss";
+            if(profit > 0){
+                status = "profit";
+            }
+            let product = '<tr class="' + status + '">';
+                product += '<td>' + name + '</td>';
+                product += '<td>' + brand + '</td>';
+                product += '<td>' + buy + '</td>';
+                product += '<td>' + sale + '</td>';
+                product += '<td>' + profit + '</td>';
+                product += '</tr>';
+
+            const current = document.getElementById("result").innerHTML;
+            document.getElementById("result").innerHTML = product + current;
+        }
+        </script>
+    </body>
+</html>

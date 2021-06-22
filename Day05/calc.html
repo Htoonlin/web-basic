@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calculator</title>
+    </head>
+    <body>
+        <p>
+            <input id="firstInput" type="number" placeholder="Enter First Number" />
+            <input id="secondInput" type="number" placeholder="Enter Second Number" />
+        </p>
+        <p>
+            <button type="button" onclick="addNumber()">Add</button>
+            <button type="button" onclick="testLoop()">Test Loop</button>
+            <button type="button" onclick="testCondition()">Test Condition</button>
+        </p>
+        <p>
+            <input id="resultInput" type="number" placeholder="Result" />
+        </p>
+        <p id="resultLoop"></p>
+        <script type="text/javascript">
+            function testCondition() {
+                var a = document.getElementById("firstInput").value;
+                var b = document.getElementById("secondInput").value;
+                if(a > b){
+                    document.getElementById("resultLoop").innerHTML = "First Number is greater than Second Number.";
+                } else if(a < b){
+                    document.getElementById("resultLoop").innerHTML = "Second Number is greater than First Number.";
+                } else {
+                    document.getElementById("resultLoop").innerHTML = "First Number and Second Number are equal.";
+                }
+            }
+            function testLoop() {
+                var headers = '';
+                for(var i = 1; i <= 100; i++){
+                    headers += " Text " + i;
+                }
+                console.log('headers => ', headers);
+                document.getElementById("resultLoop").innerHTML = headers;
+            }
+
+            function addNumber(){
+                var a = document.getElementById("firstInput").value;
+                var b = document.getElementById("secondInput").value;
+                var result = parseInt(a) + parseInt(b);
+                document.getElementById("resultInput").value = result;
+            }
+        </script>
+    </body>
+</html>

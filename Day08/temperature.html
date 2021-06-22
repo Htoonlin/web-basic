@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Celcius to Farenheit</title>
+        <style type="text/css">
+            input {
+                font-size: 12pt;
+                width: 250px;
+                border: none;
+                background-color: beige;
+                padding:8px 10px;
+                border-bottom: 1px solid #999;
+            }
+            button {
+                height: 36px;
+                width: 120px;
+                background-color: bisque;
+                border: 1px solid burlywood;
+                box-shadow: 0 1px 3px #999;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <input type="number" id="input" placeholder="Enter Celcius/Farenheit" />
+            <p>
+                <button onclick="changeFarenheit()">To Farenheit</button>
+                <button onclick="changeCelcius()">To Celcius</button>
+            </p>
+            <input type="number" id="result" placeholder="Result Farenheit/Celcius" readonly />
+        </div>
+        <p>
+            To Farenheit => (celcius * (9/5)) + 32 <br />
+            To Celcius => (farenheit - 32) * (5/9)
+        </p>
+        <script type="text/javascript">
+        function changeFarenheit(){
+            const cel = document.getElementById("input").value;
+            const farenheit = (cel * (9/5)) + 32;
+            document.getElementById("result").value = farenheit;
+        }
+        function changeCelcius() {
+            const farenheit = document.getElementById("input").value;
+            const cel = (farenheit - 32) * 5/9;
+            document.getElementById("result").value = cel;
+        }
+        </script>
+    </body>
+</html>
