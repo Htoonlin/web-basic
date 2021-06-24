@@ -113,10 +113,10 @@
             </p>
             <div class="search-input">
                 <img src="imgs/search.png" width="22" alt="Search Icon" />
-                <input type="search" />
+                <input type="search" id="search" />
             </div>
             <p class="search-button" align="center">
-                <button type="button">Google Search</button>
+                <button type="button" onclick="search()">Google Search</button>
                 <button type="button">I'm Feeling Lucky</button>
             </p>
             <p class="search-suggest" align="center">
@@ -141,5 +141,12 @@
                 </div>
             </div>
         </div>
+        <script type="text/javascript">
+        function search(){
+            const keyword = document.getElementById("search").value;
+            const search_url = 'https://www.google.com/search?q=' + keyword;
+            window.location.href = search_url;
+        }
+        </script> 
     </body>
 </html>
