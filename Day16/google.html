@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Google</title>
+        <style type="text/css">
+            body{
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            .header-bar{
+                position: absolute;
+                top: 20px;
+                right: 20px;
+            }
+            .header-bar > a {
+                padding: 20px 10px;
+                text-decoration: none;
+                color: #4a4a4a;
+                font-size: 14px;
+            }
+            .header-bar > a > img {
+                margin-bottom: -5px;
+            }
+            .header-bar > img {
+                width: 32px;
+                height: 32px;
+                border-radius: 16px;
+                border: 1px solid #d3d3d3;
+                float: right;
+                margin-left: 10px;
+                margin-top: -8px;
+            }
+            .search-box {
+                width: 600px;
+                margin: auto;
+                height: 180px;
+                margin-top: 250px;
+            }
+            .search-input > input {
+                width: 100%;
+                padding: 12px 8px;
+                border: 1px solid #d3d3d3;
+                border-radius: 30px;
+                padding-left: 50px;
+                font-size: 14px;
+            }
+            .search-input > input:hover{
+                box-shadow: 0 2px 5px #D3D5DF;
+            }
+            .search-input > img {
+                position: relative;
+                top: 38px;
+                left: 15px;
+            }
+            .search-button > button {
+                background-color: #F8F9FA;
+                border: 1px solid #eceff2;
+                padding: 10px 20px;
+            }
+            .search-button > button:hover{
+                box-shadow: 0 1px 3px #D3D5DF;
+            }
+            .search-suggest {
+                font-size: 0.8em;
+            }
+            .search-suggest > a {
+                text-decoration: none;
+            }
+            .footer-bar {
+                background-color: #F2F2F2;
+                position: fixed;
+                left: 0;
+                bottom: 0;
+                right: 0;
+            }
+            .footer-bar a {
+                text-decoration: none;
+                color: #6F6F6F;
+                font-weight: lighter;
+                font-size: 15px;
+            }
+            .footer-bar > .language {
+                padding: 16px 24px;
+                border-bottom: 1px solid #e1e1e1;
+            }
+            .footer-bar > .menu {
+                padding: 16px 8px;
+                height: 20px;
+            }
+            .menu a{
+                padding: 5px 16px;
+                font-size: 14px;
+            }
+            .menu > .left {
+                float: left;
+            }
+            .menu > .right {
+                float: right;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header-bar">
+            <a href="https://mail.google.com/mail/&ogbl">Gmail</a>
+            <a href="https://www.google.com.mm/imghp?hl=en&ogbl">Images</a>
+            <a href="https://www.google.com.mm/intl/en/about/products">
+                <img src="./imgs/apps.png" height="20" alt="Apps" />
+            </a>
+            <img src="./imgs/user.png" height="32" alt="User Profile" />
+        </div>
+        <div class="search-box">
+            <p align="center">
+                <img src="imgs/logo.png" alt="Google"/>
+            </p>
+            <div class="search-input">
+                <img src="imgs/search.png" width="22" alt="Search Icon" />
+                <input type="search" />
+            </div>
+            <p class="search-button" align="center">
+                <button type="button">Google Search</button>
+                <button type="button">I'm Feeling Lucky</button>
+            </p>
+            <p class="search-suggest" align="center">
+                Google offered in: <a href="#">မြန်မာ (မြန်မာ)</a>
+            </p>
+        </div>
+        <div class="footer-bar">
+            <div class="language">
+                <a href="#">Myanmar (Burma)</a>
+            </div>
+            <div class="menu">
+                <div class="left">
+                    <a href="#">About</a>
+                    <a href="#">Advertising</a>
+                    <a href="#">Business</a>
+                    <a href="#">How Search Works</a>
+                </div>
+                <div class="right">
+                    <a href="#">Privacy</a>
+                    <a href="#">Terms</a>
+                    <a href="#">Settings</a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
