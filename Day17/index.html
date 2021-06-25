@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Example 01</title>
+        <style type="text/css">
+        body{
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            padding: 0;
+            margin: 0;
+        }
+        .logo {
+            display: block;
+            background-color: #2A2A2A;
+            color: white;
+            padding: 20px;
+        }
+        .main-menu {
+            background-color: #4c4c4c;            
+            padding: 12px 10px;
+        }
+        .main-menu > a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;            
+            margin: 0;
+            border-right: 1px solid #3f3f3f;
+        }
+        .content {
+            margin-right: 380px;
+        }
+        h2 {
+            padding: 0;
+            margin: 0;
+        }
+        .post {
+            margin: 20px;
+            border-bottom: 1px solid #c4c4c4;
+            min-height: 200px;
+            display: block;
+        }
+        .post > img {
+            float: left;
+            margin-right: 20px;
+        }
+        .post a {
+            text-decoration: none;
+            color: rgb(227, 83, 5);
+            text-transform: uppercase;
+        }
+        .post-desc {
+            padding: 5px 20px;
+        }
+        .side-bar {
+            width: 320px;       
+            background-color: #d3d3d3;
+            padding: 20px;
+            position: absolute;
+            top: 165px;
+            bottom: 50px;
+            right: 0;
+        }
+        .side-bar h3 {
+            border-bottom: 1px solid #c4c4c4;
+            padding-bottom: 10px;
+        }
+        .side-bar ul {
+            margin: 0;
+            padding: 0;
+        }
+        .side-bar li {
+            padding: 10px 20px;
+            list-style: none;
+        }
+        .side-bar li > a, footer  a {
+            text-decoration: none;
+            color: rgb(227, 83, 5);
+        }
+        footer {
+            background-color: #2A2A2A;
+            color: white;
+            display: block;
+            padding: 5px;
+            margin: 0;
+            font-size: 0.8em;
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            left: 0;
+        }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="logo">
+                <h1>SUNDEW MYANMAR</h1>
+            </div>
+            <div class="main-menu">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+                <a href="#">Link 4</a>
+                <a href="#">Link 5</a>
+            </div>
+            <div class="container">
+                <div class="content">
+                    <div class="post">
+                        <img src="imgs/logo.png" height="160px" />
+                        <div class="post-desc">
+                            <h2>Lorem ipsum dolor sit amet.</h2>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod felis at lobortis lacinia. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam finibus porta lorem eget lacinia. Morbi semper rhoncus vulputate. Nullam suscipit ullamcorper felis. Vivamus metus ex, finibus ac elit at, tristique scelerisque quam. 
+                            </p>
+                            <p>
+                                <a href="#">Read More</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="post">
+                        <img src="imgs/logo.png" height="160px" />
+                        <div class="post-desc">
+                            <h2>Lorem ipsum dolor sit amet.</h2>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod felis at lobortis lacinia. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam finibus porta lorem eget lacinia. Morbi semper rhoncus vulputate. Nullam suscipit ullamcorper felis. Vivamus metus ex, finibus ac elit at, tristique scelerisque quam. 
+                            </p>
+                            <p>
+                                <a href="#">Read More</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="post">
+                        <img src="imgs/logo.png" height="160px" />
+                        <div class="post-desc">
+                            <h2>Lorem ipsum dolor sit amet.</h2>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod felis at lobortis lacinia. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam finibus porta lorem eget lacinia. Morbi semper rhoncus vulputate. Nullam suscipit ullamcorper felis. Vivamus metus ex, finibus ac elit at, tristique scelerisque quam. 
+                            </p>
+                            <p>
+                                <a href="#">Read More</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div style="clear: both;"></div>
+                <div class="side-bar">
+                    <h3>SIDEBAR LINK</h3>
+                    <ul>
+                        <li><a href="#">Link 1</a></li>
+                        <li><a href="#">Link 2</a></li>
+                        <li><a href="#">Link 3</a></li>
+                        <li><a href="#">Link 4</a></li>
+                        <li><a href="#">Link 5</a></li>
+                    </ul>
+                    <h3>OTHER WIDGETS</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vitae elit ac ex hendrerit bibendum quis eu sem. Aliquam sit amet malesuada sapien. Donec venenatis, dolor vulputate accumsan porttitor, felis elit gravida diam, eget gravida dui erat vel mauris. Sed nec rutrum libero. Phasellus tincidunt metus quis ante ornare finibus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Quisque tincidunt sodales leo, vel vulputate nulla venenatis vitae. Phasellus ut dolor vel mi tincidunt aliquam et ac leo. Nam in lorem dapibus, molestie dui vel, aliquam arcu.
+                    </p>
+                </div>
+            </div>
+            <footer>
+                <p align="center">
+                    Copyright &copy; <a href="http://www.sundewmyanmar.com">SUNDEW MYANMAR</a> (2010-2021). All right reserved.
+                </p>
+            </footer>
+        </div>
+    </body>
+</html>
