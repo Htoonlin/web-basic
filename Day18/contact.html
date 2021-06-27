@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Contact Me</title>
+        <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+        <meta content="utf-8" http-equiv="encoding">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <style type="text/css">
+        body {
+            padding: 0;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 0.9em;
+        }
+        .side-bar {
+            width: 280px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            background-color: #333333;
+            color: #9a9a9a;
+            padding: 10px 80px;
+        }
+        .side-bar > h1 {
+            font-weight: bold;
+            color: white;
+        }
+        .side-bar > p {
+            font-size: 9pt;
+            letter-spacing: 0.8px;
+        }
+        .side-bar > ul {
+            border-top: 1px solid #5E5E5E;
+            border-bottom: 1px solid #5E5E5E;
+            padding: 20px 0;
+            margin: 25px 0px;
+            margin-right: 100px;
+        }
+        .side-bar li {
+            list-style: none;
+            padding: 8px 0px;
+            margin: 0;
+        }
+        .side-bar a {
+            color: #9a9a9a;
+            text-decoration: none;
+            font-size: 10pt;
+            font-weight: bold;
+        }
+        .side-bar a.active {
+            color: white;
+        }
+        .side-bar a:hover {
+            color: #fff;
+        }
+        .social a {
+            color: #9a9a9a;
+            font-size: 20px;
+            margin-right: 10px;
+        }
+        .main {
+            margin-left: 440px;
+            padding: 10px;
+        }
+        .container {
+            margin: auto;
+            width: 960px;
+        }
+
+        /* Contact */
+        .contact {
+            font-size: 12pt;
+            color: #4a4a4a;
+            line-height: 1.8em;
+            margin-bottom: 50px;
+        }
+        h1 {
+            color: #313131;            
+        }
+        label {
+            display: block;
+            text-transform: uppercase;
+            font-size: 9pt;
+            color: #5c5c5c;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px 8px;
+            border: 1px solid #c7c7c7;
+        }
+        a.submit {
+            text-decoration: none;
+            padding: 12px 25px;
+            border: 1px solid #c7c7c7;            
+            font-size: 12pt;
+            color: #4a4a4a;
+        }
+        </style>
+    </head>
+    <body>
+        <div class="side-bar">
+            <h1>Moon</h1>
+            <p>I'm a simple responsive blog template. Easily add new blog posts using the Webflow Editor or customize your layout/design using the Webflow Designer.</p>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="all-post.html">ALL POSTS</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a class="active" href="contact.html">CONTACT</a></li>
+            </ul>
+            <div class="social">
+                <a href="#"><i class="fab fa-facebook-square"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-dribbble"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+        <div class="main">
+            <div class="container">
+                <div class="contact">
+                    <h1>Get in touch</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas maecenas pharetra convallis posuere morbi leo urna.
+                    </p>
+                    <form submit="#">
+                        <p>
+                            <label>Name </label>
+                            <input type="text" placeholder="Enter your name" />
+                        </p>
+                        <p>
+                            <label>E-mail Address </label>
+                            <input type="email" placeholder="Enter your email address" />
+                        </p>
+                        <p>
+                            <label>Message </label>
+                            <textarea placeholder="Enter your message" rows="5"></textarea>
+                        </p>
+                        <a class="submit" href="index.html">Submit</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
