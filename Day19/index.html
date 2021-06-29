@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Day19 Project</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <link rel="stylesheet" href="thirdparty/bootstrap-5.0.2-dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="thirdparty/fontawesome-free-5.15.3-web/css/all.min.css" />
+        <link rel="stylesheet" href="./css/styles.css" />
+    </head>
+    <body>
+        <div class="container">
+            <!--Main Navigation-->
+            <nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgb(169, 206, 255);">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">Day 19</a>
+                    
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    
+                    <div class="collapse navbar-collapse d-flex justify-content-end" id="mainNav"> 
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#">
+                                    <i class="fa fa-home"></i> Home
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <i class="fas fa-newspaper"></i> Blog
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link">
+                                    <i class="fas fa-images"></i> Gallery
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link">
+                                    <i class="fas fa-address-card"></i> About
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link">
+                                    <i class="fas fa-paper-plane"></i> Contact
+                                </a>
+                            </li>
+                        </ul>                         
+                    </div>
+                </div>
+            </nav>
+            
+            <!--Slide Show-->
+            <div class="row slideshow">
+                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img src="./img/slide-1.jpg" class="d-block w-100" alt="Slide 1">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="./img/slide-2.jpg" class="d-block w-100" alt="Slide 2">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="./img/slide-3.jpg" class="d-block w-100" alt="Slide 3">
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+            </div>
+
+            <!--Posts-->
+            <div class="row post">
+                <div class="col">
+                    <div class="card">
+                        <img src="./img/post-1.jpg" class="card-img-top" alt="Post 1">
+                        <div class="card-body">
+                          <h5 class="card-title">Card title</h5>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                      </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="./img/post-2.jpg" class="card-img-top" alt="Post 2">
+                        <div class="card-body">
+                          <h5 class="card-title">Card title</h5>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                      </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="./img/post-3.jpg" class="card-img-top" alt="Post 3">
+                        <div class="card-body">
+                          <h5 class="card-title">Card title</h5>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+
+
+        <script type="text/javascript" src="thirdparty/bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>
