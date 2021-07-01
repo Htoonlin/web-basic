@@ -1,0 +1,17 @@
+.carousel-item img{
+    height: 800px;
+    width: 100%;
+}
+
+.post {
+    margin: 15px 0px;
+}
+
+.post img{
+    width: 100%;
+    height: 300px;
+}
+
+.post .time, .post .author {
+    font-size: 0.8em;
+}
